@@ -133,53 +133,7 @@ h1 {
     visibility: visible;
 }
 
-.btn_container {
-    height: 100%;
-    text-align: center;
-}
 
-.btn_container:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    width: 0;
-}
-
-.open_button {
-    background: #363D4E;
-    display: inline-block;
-    height: 66px;
-    position: relative;
-    vertical-align: middle;
-    whitespace: normal;
-    width: 172px;
-    z-index: 1000;
-    -webkit-transition: opacity 100ms linear;
-    -moz-transition: opacity 100ms linear;
-    -ms-transition: opacity 100ms linear;
-    -o-transition: opacity 100ms linear;
-    transition: opacity 100ms linear;
-}
-
-a.open_button {
-    color: #FFFFFF;
-    letter-spacing: 2px;
-    line-height: 66px;
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-a.open_button:hover {
-    background: #3E465A;
-}
-
-a.open_button.load {
-    opacity: 0;
-}
 
 button.modal_close {
     background: #363D4E;
