@@ -1,0 +1,11 @@
+{
+    "name": "tsComplexity",
+    "version": "1.0.0",
+    "description": "tsComplexity is a tool for measuring the complexity of  code.",
+    "manifest_version": 3,
+    "author": "Nayan Prasad p K",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "tsComplexity"
+    }
+}
