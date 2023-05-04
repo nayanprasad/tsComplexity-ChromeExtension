@@ -1,19 +1,260 @@
 body {
-    background-color: black;
-    color: white !important;
+    background: url("./images/bg.jpg");
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     padding: 0 50px 0 50px ;
+    color: #7b2eba;
+}
+
+h1 {
+    background-image: linear-gradient(90deg, red, blue);
+    /*background-clip: text;*/
+    -webkit-background-clip: text;
+    color: transparent !important;
+    width: 200px;
 }
 
 #code {
-    border: 1px solid white;
-    padding: 16px;
-    /*overflow: auto;*/
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
     resize: none;
 }
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+.btn {
+    border: none;
+    background: rgb(251,33,117);
+    background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.btn:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn:hover{
+    opacity: .7;
+}
+.btn:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+
+
+
+.modal {
+    opacity: 0;
+    padding: 50px;
+    position: absolute;
+    z-index: 1100;
+    -webkit-transition: opacity 600ms linear 600ms;
+    -moz-transition: opacity 600ms linear 600ms;
+    -ms-transition: opacity 600ms linear 600ms;
+    -o-transition: opacity 600ms linear 600ms;
+    transition: opacity 600ms linear 600ms;
+}
+
+.modal_info {
+    background: #FCF9F2;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.modal_overlay {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 900;
+    -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    -ms-transition: opacity 200ms linear;
+    -o-transition: opacity 200ms linear;
+    transition: opacity 200ms linear;
+}
+
+.display {
+    opacity: 1;
+    visibility: visible;
+}
+
+.conceal {
+    visibility: visible;
+}
+
+.btn_container {
+    height: 100%;
+    text-align: center;
+}
+
+.btn_container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+}
+
+.open_button {
+    background: #363D4E;
+    display: inline-block;
+    height: 66px;
+    position: relative;
+    vertical-align: middle;
+    whitespace: normal;
+    width: 172px;
+    z-index: 1000;
+    -webkit-transition: opacity 100ms linear;
+    -moz-transition: opacity 100ms linear;
+    -ms-transition: opacity 100ms linear;
+    -o-transition: opacity 100ms linear;
+    transition: opacity 100ms linear;
+}
+
+a.open_button {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    line-height: 66px;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.open_button:hover {
+    background: #3E465A;
+}
+
+a.open_button.load {
+    opacity: 0;
+}
+
+button.modal_close {
+    background: #363D4E;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    -webkit-transition: -webkit-transform 600ms;
+    -moz-transition: -moz-transform 600ms;
+    -ms-transition: -ms-transform 600ms;
+    -o-transition: -o-transform 600ms;
+    transition: transform 600ms;
+}
+
+button.modal_close:hover {
+    background: #3E465A;
+    -webkit-transform: rotate(360deg) scale(1.10);
+    -moz-transform: rotate(360deg) scale(1.10);
+    -ms-transform: rotate(360deg) scale(1.10);
+    -o-transform: rotate(360deg) scale(1.10);
+    transform: rotate(360deg) scale(1.10);
+    -webkit-transition: -webkit-transform 600ms;
+    -moz-transition: -moz-transform 600ms;
+    -ms-transition: -ms-transform 600ms;
+    -o-transition: -o-transform 600ms;
+    transition: transform 600ms;
+}
+
+button.modal_close span, span:before, span:after {
+    background: #FFFFFF;
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+}
+
+button.modal_close span:first-child {
+    background: none;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+button.modal_close span:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+button.modal_close span:after {
+    -webkit-transform: translateY(-2px) rotate(-45deg);
+    -moz-transform: translateY(-2px) rotate(-45deg);
+    -ms-transform: translateY(-2px) rotate(-45deg);
+    -o-transform: translateY(-2px) rotate(-45deg);
+    transform: translateY(-2px) rotate(-45deg);
+    top: 2px;
+}
+
 
 
 
