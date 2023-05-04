@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0 50px 0 50px ;
+}
+
+#code {
+    border: 1px solid white;
+    padding: 16px;
+    /*overflow: auto;*/
+    resize: none;
+}
+
+
+
+
