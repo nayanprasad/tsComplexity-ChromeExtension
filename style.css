@@ -6,6 +6,11 @@ body {
     line-height: 1.5;
     padding: 0 50px 0 50px ;
     color: #7b2eba;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -101,7 +106,8 @@ h1 {
 }
 
 .modal_info {
-    background: #FCF9F2;
+    background-image: linear-gradient(90deg, #7d5e91, #a15363);
+    color: wheat ;
     padding: 50px 100px;
     text-align: center;
 }
@@ -126,13 +132,12 @@ h1 {
 
 .display {
     opacity: 1;
-    visibility: visible;
+    /*visibility: visible;*/
 }
 
 .conceal {
-    visibility: visible;
+    /*visibility: visible;*/
 }
-
 
 
 button.modal_close {

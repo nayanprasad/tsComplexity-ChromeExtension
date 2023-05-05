@@ -23,9 +23,6 @@ var modal = (function(){
     $modal.append($content, $close);
 
     $close.on('click', function(e){
-        $('.modal, .modal_overlay').addClass('conceal');
-        $('.modal, .modal_overlay').removeClass('display');
-        $('.open_button').removeClass('load');
         e.preventDefault();
         modal.close();
     });
